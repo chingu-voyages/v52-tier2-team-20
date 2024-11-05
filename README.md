@@ -35,7 +35,7 @@ your repo access and to practice PR'ing with your team *before* you start
 coding!
 
 - Kristen Boraca [GitHub](https://github.com/khb2me/chingu_group20.git) / [LinkedIn](https://linkedin.com/in/liaccountname)
-- Gary Lei[GitHub](https://github.com/xsymmetry9/) / [LinkedIn](www.linkedin.com/in/gary-lei-b8b4a540)
+- Gary Lei[GitHub](https://github.com/xsymmetry9/) / [LinkedIn](https://www.linkedin.com/in/gary-lei-b8b4a540)
 
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
