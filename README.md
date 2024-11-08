@@ -37,7 +37,7 @@ coding!
 - Kristen Boraca [GitHub](https://github.com/khb2me/chingu_group20.git) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Gary Lei [GitHub](https://github.com/xsymmetry9/) / [LinkedIn](https://www.linkedin.com/in/gary-lei-b8b4a540)
 - Stephen Ho [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
-
+- Azalya Rahmatika [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
 
 
    ...
