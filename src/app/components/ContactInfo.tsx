@@ -15,7 +15,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ onSubmit }) => {
     phone: "",
   });
 
-  const [errors, setErrors] = useState({
+  const [, setErrors] = useState({
     street_address: false,
     name: false,
     email: false,
@@ -46,7 +46,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ onSubmit }) => {
     const hasErrors = Object.values(newErrors).some((error) => error);
 
     if (hasErrors) {
-      alert("Please fill in all fields before submitting.");
+      alert("Please fill in all fields before submitting.")
       return;
     }
 
