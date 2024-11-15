@@ -94,6 +94,7 @@ const Scheduling: React.FC<SchedulingProps> = ({ onSubmit }) => {
 
             <div className="flex justify-between absolute top-1/2 transform -translate-y-1/2 w-full">
               <button
+                type="button"
                 onClick={handlePrev}
                 disabled={startIndex === 0}
                 className="bg-gray-200 text-black border border-black rounded disabled:opacity-50 h-8 w-8 flex items-center justify-center"
@@ -101,6 +102,7 @@ const Scheduling: React.FC<SchedulingProps> = ({ onSubmit }) => {
                 &larr;
               </button>
               <button
+                type="button"
                 onClick={handleNext}
                 disabled={startIndex + datesPerPage >= dates.length}
                 className="bg-gray-200 text-black border border-black rounded disabled:opacity-50 h-8 w-8 flex items-center justify-center"
