@@ -3,9 +3,10 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 
-app.get("/", (req, res) =>{
-    res.send("Hello from the backend");
-});
+//Add routes
+const routes = require("./routes/app.routes.js");
+
+app.use("/", routes);
 
 app.listen(PORT, () =>{
     console.log(`Backend running on http://localhost:${PORT}`);
