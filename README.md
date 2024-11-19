@@ -39,6 +39,19 @@ coding!
 - Stephen Ho [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
 - Azalya Rahmatika [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
 
+## Installation
 
-   ...
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+Frontend
+```
+cd packages
+cd frontend
+npm install
+```
+
+Backend
+
+```
+cd packages
+cd backend
+npm install
+```
