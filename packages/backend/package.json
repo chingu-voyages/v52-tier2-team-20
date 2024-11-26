@@ -18,13 +18,16 @@
     "url": "git+https://github.com/chingu-voyages/v52-tier2-team-20.git"
   },
   "scripts": {
-    "test": "node ./__tests__/backend.test.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo testing Node server"
   },
   "bugs": {
     "url": "https://github.com/chingu-voyages/v52-tier2-team-20/issues"
   },
   "homepage": "https://github.com/chingu-voyages/v52-tier2-team-20#readme",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0"
   }
 }
