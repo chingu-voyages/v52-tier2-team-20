@@ -41,17 +41,13 @@ coding!
 
 ## Installation
 
-Frontend
 ```
-cd packages
-cd frontend
 npm install
-```
-
-Backend
 
 ```
-cd packages
-cd backend
-npm install
+## Setup
+
+``` 
+npm run dev
+
 ```
