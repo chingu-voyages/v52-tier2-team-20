@@ -39,15 +39,17 @@ coding!
 - Stephen Ho [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
 - Azalya Rahmatika [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
 
-## Installation
+## Monorepo app with lerna
+You can find the documentation [Lerna](https://lerna.js.org/docs/introduction)
 
-```
-npm install
-
-```
-## Setup
+### Installation
 
 ``` 
-npm run dev
+npm install
+npx lerna init
+```
 
+To run everything
+```
+npx lerna run build
 ```
