@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
 
 export default {
   content: [
@@ -14,5 +15,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({addComponents} : PluginAPI) {
+      addComponents({
+        '.btn-hover': {
+          '@apply bg-blue-400 rounded-md py-3 px-4 drop-shadow-sm': {},
+          '&:hover': {
+            '@apply bg-blue-600 text-white drop-shadow-md' : {},
+          },
+        },
+      });
+    },
+  ],
 } satisfies Config;
