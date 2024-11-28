@@ -39,6 +39,17 @@ coding!
 - Stephen Ho [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
 - Azalya Rahmatika [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
 
+## Monorepo app with lerna
+You can find the documentation [Lerna](https://lerna.js.org/docs/introduction)
 
-   ...
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+### Installation
+
+``` 
+npm install
+npx lerna init
+```
+
+To run everything
+```
+npx lerna run build
+```

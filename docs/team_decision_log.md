@@ -11,12 +11,13 @@ you like the best.
 | No. | Question/Option | Gary | Kirsten | Ryu | Lya | Stephen | Anand |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Team meeting schedule | | | | | | |
-|   |	- Sprint Planning Sunday@9:00 a.m. CST | | | | | | |
-|   |	- Knowledge Xfer as needed | | | | | | |
+|   |	- Sprint Planning Monday@11:00 a.m. Asia / Taipei | | | | | | |
+|   |	- Knowledge Xfer as needed | x | | | | | |
 |   |	- Working Session Thursday@4:00 p.m. CST | | | | | | |
 | 2	| Project Backlog Tool | | | | | | |
 |   |	- Notion | x | | | x | | |
-|   |	- Jira | | | | | | |
+|   |	- Jira | x | | | | | |
+|   |   - Asana | x | | | | | |
 | 3	| Technical Stack (vote by adding your pref. in the cell under your name) | | | | | | |
 |   |	- BE Language | NodeJS | | | NodeJS | | |
 |   |	- FE Language | React | | | JS/TS | | |
@@ -26,10 +27,10 @@ you like the best.
 | 4	| Where to host the app? | | | | | | |
 |   |	- Heroku (suitable for FE, BE, & Postgres) | | | | x | | |
 |   |	- Netlify (suitable only for FE) | | | | | | |
-|   |	- Vercel (suitable only for FE) | | | | x | | |
+|   |	- Vercel (suitable only for FE) | x | | | x | | |
 |   |	- Mongo Atlas (suitable only for MongoDB) | | | | | | |
 | 5	| BE/FE repos organization | | | | | | |
-|   |	- Separate GitHub repos for each | | | | x | | |
+|   |	- Separate GitHub repos for each | x | | | x | | |
 |   |	- Single GitHub repo for both | | | | | | |
 | 6	| Wireframing tool | | | | | | |
 |   |	- Paper & pencil | | | | | | |
@@ -37,7 +38,7 @@ you like the best.
 |   |	- Balsamiq | | | | | | |
 |   |	- Figma | x | | | x | | |
 | 7	| Who works in which part of the app? | | | | | | |
-|   | - BE (not applicable for Tier 1 teams) | | | | | | |
-|   |	- FE | | | | | | |
+|   | - BE | x | | | | | |
+|   |   - FE | x | | | | | |
 | 8	| ... | | | | | | |
 | n | ... | | | | | | |
