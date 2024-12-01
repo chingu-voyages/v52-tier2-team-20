@@ -46,10 +46,6 @@ You can find the documentation [Lerna](https://lerna.js.org/docs/introduction)
 
 ``` 
 npm install
-npx lerna init
-```
-
-To run everything
-```
-npx lerna run build
+npm run build
+npm run dev
 ```
