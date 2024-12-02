@@ -1,0 +1,61 @@
+{
+    "GET /api/v1": {
+        "description": "Get all available API endpoints"
+    },
+    "GET /api/v1/resident/request": {
+        "description": "Get all residents' requests"
+    },
+    "GET /api/v1/resident/request/:requestId": {
+        "description": "Get resident request by requestId"
+    },
+    "POST /api/v1/resident/request": {
+        "description": "Post a new resident request",
+        "postBodySchema" : {
+            "name" :"String",
+            "email" : "String",
+            "phoneNumber" : "String",
+            "address" : "String",
+            "preferred_timeslot" : "String",
+            "request_status": "String"
+        },
+        "exampleResponse" : {
+            "status": 201,
+            "message": "New request successfully submitted",
+            "data": {
+              "id": "UUID",
+              "name": "String",
+              "email": "String",
+              "phoneNumber": "String",
+              "address": "String",
+              "preferred_timeslot": "String",
+              "request_status": "String"
+            }
+          }
+    },
+    "PATCH /api/v1/admin/request/:requestId": {
+        "description": "Patch the request status",
+        "postBodySchema" :{
+            "request_status": "pending || visited || cancelled"
+        },
+        "exampleResponse" :{
+            "status" : 200,
+            "message" : "Request status successfully updated",
+            "data": {
+                "id": "UUID",
+                "name": "String",
+                "email": "String",
+                "phoneNumber": "String",
+                "address": "String",
+                "preferred_timeslot": "String",
+                "request_status": "String"
+              }
+        }
+    },
+    "DELETE /api/v1/admin/request/:requestId" : {
+        "description" : "Delete a request by requestId",
+        "exampleResponse" : {
+            "status": 204,
+            "message": "Request successfully deleted"
+        }
+    }
+}
