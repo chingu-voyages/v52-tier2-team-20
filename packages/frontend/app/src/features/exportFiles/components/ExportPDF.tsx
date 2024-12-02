@@ -1,8 +1,9 @@
-import { appointmentRequests } from '@/asset/mockData/appointmentRequests'
-import React, { useEffect, useState } from 'react'
-import AppointmentPDF from '@/components/AppointmentPDF'
+import { appointmentRequests } from "@/app/src/asset/mockData/appointmentRequests"
+import AppointmentPDF from "@/app/src/components/AppointmentPDF"
+import Button from "@/app/src/components/Button"
+import { useEffect, useState } from "react"
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import Button from '@/components/Button'
+
 
 // TODO pass the fetched data
 const ExportPDF = () => {

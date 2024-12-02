@@ -1,9 +1,11 @@
+"use client"
+
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { appointmentRequests } from '@/asset/mockData/appointmentRequests'
-import ExportCSV from '@/features/exportFiles/components/ExportCSV'
-import ExportPDF from '@/features/exportFiles/components/ExportPDF'
-import { filterRequestsByPeriod } from '@/utils/filterRequestsByPeriod'
+import { useRouter } from 'next/navigation'
+import { appointmentRequests } from '@/app/src/asset/mockData/appointmentRequests'
+import { filterRequestsByPeriod } from '@/app/src/utils/filterRequestsByPeriod'
+import ExportCSV from '@/app/src/features/exportFiles/components/ExportCSV'
+import ExportPDF from '@/app/src/features/exportFiles/components/ExportPDF'
 
 export default function Dashboard() {
   const router = useRouter()

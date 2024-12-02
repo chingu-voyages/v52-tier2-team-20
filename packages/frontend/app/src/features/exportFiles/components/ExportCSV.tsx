@@ -1,6 +1,7 @@
-import { exportCSV } from '@/utils/exportCSV'
-import Button from '@/components/Button'
-import { appointmentRequests } from '@/asset/mockData/appointmentRequests'
+import { appointmentRequests } from "@/app/src/asset/mockData/appointmentRequests"
+import Button from "@/app/src/components/Button"
+import { exportCSV } from "@/app/src/utils/exportCSV"
+
 
 // TODO pass the fetched data
 const ExportCSV = () => {
