@@ -14,4 +14,4 @@
 4. Run ``npx prisma generate`` (make sure you are in the packages/backend before running this cmd)
 5. From the root folder, run ``npm run dev``
 
-Visit http://localhost:3000/api/v1 for the list of available API endpoints
+Visit http://localhost:8000/api/v1 for the list of available API endpoints
