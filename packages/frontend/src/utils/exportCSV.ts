@@ -1,4 +1,4 @@
-import { appointmentRequests } from '@/src/asset/mockData/appointmentRequests'
+import { appointmentRequests } from "../asset/mockData/appointmentRequests"
 
 type ExportCSVProps = {
   data: typeof appointmentRequests

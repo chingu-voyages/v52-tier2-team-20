@@ -1,6 +1,6 @@
-import { appointmentRequests } from "@/app/src/asset/mockData/appointmentRequests"
-import Button from "@/app/src/components/Button"
-import { exportCSV } from "@/app/src/utils/exportCSV"
+import { appointmentRequests } from "@/src/asset/mockData/appointmentRequests"
+import Button from "@/src/components/Button"
+import { exportCSV } from "@/src/utils/exportCSV"
 
 
 // TODO pass the fetched data
