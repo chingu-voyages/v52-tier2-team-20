@@ -1,13 +1,15 @@
-import { useRouter } from 'next/router'
+"use client"
+
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-export type UserCredentials = {
+type UserCredentials = {
   email: string
   password: string
 }
 
 // TODO replace react-form, zod
-export function isValidUser({ email, password }: UserCredentials): boolean {
+function isValidUser({ email, password }: UserCredentials): boolean {
   const validUsersString = process.env.NEXT_PUBLIC_VALID_USERS
 
   if (!validUsersString) {
@@ -17,6 +19,7 @@ export function isValidUser({ email, password }: UserCredentials): boolean {
 
   const validUsers = validUsersString.split(',')
 
+  
   return validUsers.some((user) => {
     const [validEmail, validPassword] = user.split(':')
     return validEmail === email && validPassword === password
@@ -36,7 +39,7 @@ const Login = () => {
 
     if (isValidUser(credentials)) {
       localStorage.setItem('isLoggedIn', 'true')
-      router.push('/admin')
+      router.push('/admin/dashboard')
     } else {
       setError('Invalid email or password')
     }
