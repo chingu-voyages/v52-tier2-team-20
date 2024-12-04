@@ -19,6 +19,9 @@ model requests {
   email String
   phoneNumber String
   address String
+  latitude String
+  longitude String
+  preferred_date String
   preferred_timeslot String
   request_status String
 }
