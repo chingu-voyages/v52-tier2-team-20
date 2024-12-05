@@ -23,7 +23,11 @@
 # misc
 .DS_Store
 *.pem
+<<<<<<< HEAD
 *.txt
+=======
+blank.txt
+>>>>>>> 92400c6 (chore: add .txt file to gitignore)
 
 # debug
 npm-debug.log*
