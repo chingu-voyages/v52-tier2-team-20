@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Address from "./Address";
 import Contact from "./Contact";
-import Dates from "./Dates";
+import DatesContainer from "./DatesContainer";
 import Confirmation from "./Confirmation";
 
 export default function RequestForm() {
@@ -38,7 +38,6 @@ export default function RequestForm() {
       setFormTag(id);
     }
   }
-
 
   const handleAddressSubmit = () => {
     setIsAddressSubmitted(true);
@@ -108,7 +107,7 @@ export default function RequestForm() {
 
       {formTag === "address" && <Address onSubmit={handleAddressSubmit} />}
       {formTag === "contact" && <Contact onSubmit={handleContactSubmit} />}
-      {formTag === "dates" && <Dates onSubmit={handleDatesSubmit} />}
+      {formTag === "dates" && <DatesContainer onSubmit={handleDatesSubmit} />}
       {formTag === "confirm" && <Confirmation />}
     </div>
   );

@@ -1,65 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import { useContactForm, ContactFormData } from "../utils/useContactForm";
 import SubmitButton from "./SubmitButton";
 
 interface ContactProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onSubmit: (event: React.FormEvent, formData: any) => void;
+  onSubmit: (formData: ContactFormData) => void;
 }
 
 const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-
-  const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    phone: false,
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => ({ ...prev, [name]: value }));
-
-    if (value.trim() !== "") {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: false,
-      }));
-    }
-  };
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const newErrors = {
-      name: formData.name.trim() === "",
-      email: formData.email.trim() === "",
-      phone: formData.phone.trim() === "",
-    };
-
-    setErrors(newErrors);
-
-    const hasErrors = Object.values(newErrors).some((error) => error);
-
-    if (hasErrors) {
-      alert("Please fill in all fields before submitting.");
-      return;
-    }
-
-    try {
-      console.log(formData);
-      onSubmit(event, formData);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred while submitting the form. Please try again.");
-    }
-  };
+  const { formData, errors, handleChange, handleSubmit } = useContactForm(onSubmit);
 
   return (
     <div className="flex items-center justify-center flex-col w-full">
@@ -113,7 +63,6 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
             />
           </div>
         </div>
-        
 
         <SubmitButton />
       </form>
