@@ -52,7 +52,6 @@ export function useContactForm(onSubmit: (formData: ContactFormData) => void) {
     const hasErrors = Object.values(newErrors).some((error) => error);
 
     if (hasErrors) {
-      alert("Please fill in all fields before submitting.");
       return;
     }
 

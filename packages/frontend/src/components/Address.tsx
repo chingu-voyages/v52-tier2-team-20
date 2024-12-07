@@ -1,14 +1,24 @@
 import SubmitButton from "./SubmitButton";
 import { useAddressForm } from "../utils/useAddressForm";
 
-export default function Address({ onSubmit }: { onSubmit: () => void }) {
-  const { formData, errors, handleChange, handleSubmit } = useAddressForm(onSubmit);
+interface AddressProps {
+  onSubmit: (addressData: {
+    street_address: string;
+    house_number: string;
+    zip_code: string;
+    lat: string;
+    lon: string;
+  }) => void;
+}
 
+export default function Address({ onSubmit }: AddressProps) {
+  const { formData, errors, handleChange, handleSubmit } = useAddressForm(onSubmit);
+  
   return (
     <div className="text-sm w-full">
       <form onSubmit={handleSubmit} className="w-full space-y-10">
-        <div className="space-y-5">
-          <div>
+        <div className="space-y-6">
+          <div className="relative">
             <label htmlFor="street_address" className="text-base text-letter-grey font-inter">
               Street address
             </label>
@@ -18,11 +28,14 @@ export default function Address({ onSubmit }: { onSubmit: () => void }) {
               name="street_address"
               value={formData.address.street_address}
               onChange={handleChange}
-              placeholder="W Mulholland Dr"
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded border-stroke-line text-sm ${
-                errors.street_address ? "border-red-500" : ""
+              placeholder="Example: Mulholland"
+              className={`font-montserrat mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+                errors.street_address ? "border-red-500" : "border-stroke-line"
               }`}
             />
+            {errors.street_address && (
+              <p className="text-red-500 text-[10px] absolute font-montserrat">Please enter a valid address</p>
+            )}
           </div>
 
           <div>
@@ -35,10 +48,13 @@ export default function Address({ onSubmit }: { onSubmit: () => void }) {
               name="house_number"
               value={formData.address.house_number}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded border-stroke-line text-sm ${
-                errors.house_number ? "border-red-500" : ""
+              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+                errors.house_number ? "border-red-500" : "border-stroke-line"
               }`}
             />
+            {errors.house_number && (
+              <p className="text-red-500 text-[10px] absolute font-montserrat">Please enter a valid house number</p>
+            )}
           </div>
 
           <div>
@@ -51,10 +67,13 @@ export default function Address({ onSubmit }: { onSubmit: () => void }) {
               name="zip_code"
               value={formData.address.zip_code}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-1/3 h-[24px] border rounded border-stroke-line text-sm ${
-                errors.zip_code ? "border-red-500" : ""
+              className={`mt-1 px-2 py-1 w-1/3 h-[24px] border rounded text-sm ${
+                errors.zip_code ? "border-red-500" : "border-stroke-line"
               }`}
             />
+            {errors.zip_code && (
+              <p className="text-red-500 text-[10px] absolute font-montserrat">Please enter a valid zip code</p>
+            )}
           </div>
         </div>
 

@@ -15,7 +15,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
     <div className="flex items-center justify-center flex-col w-full">
       <form onSubmit={handleSubmit} className="w-full space-y-10">
         <div className="space-y-5">
-          <div>
+          <div className="relative">
             <label htmlFor="name" className="text-base text-letter-grey font-inter">
               Name
             </label>
@@ -25,10 +25,13 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded border-stroke-line text-sm ${
-                errors.name ? "border-red-500" : ""
+              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+                errors.name ? "border-red-500" : "border-stroke-line"
               }`}
             />
+            {errors.name && (
+              <p className="text-red-500 text-[10px] font-montserrat absolute">Please enter your name</p>
+            )}
           </div>
 
           <div>
@@ -41,10 +44,13 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-1/2 h-[24px] border rounded border-stroke-line text-sm ${
-                errors.phone ? "border-red-500" : ""
+              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+                errors.phone ? "border-red-500" : "border-stroke-line"
               }`}
             />
+            {errors.phone && (
+              <p className="text-red-500 text-[10px] font-montserrat absolute">Please enter your phone number</p>
+            )}
           </div>
 
           <div>
@@ -57,10 +63,13 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-1/2 h-[24px] border rounded border-stroke-line text-sm ${
-                errors.email ? "border-red-500" : ""
+              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+                errors.email ? "border-red-500" : "border-stroke-line"
               }`}
             />
+            {errors.email && (
+              <p className="text-red-500 text-[10px] font-montserrat absolute">Please enter your email address</p>
+            )}
           </div>
         </div>
 
