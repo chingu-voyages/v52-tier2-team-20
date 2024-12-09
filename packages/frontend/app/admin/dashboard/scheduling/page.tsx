@@ -1,3 +1,5 @@
+"use client"
+
 import SchedulingMap from '@/src/components/SchedulingMap'
 import React from 'react'
 
