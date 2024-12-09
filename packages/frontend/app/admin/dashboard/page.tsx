@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { appointmentRequests } from '@/src/asset/mockData/appointmentRequests'
+// import { appointmentRequests } from '@/src/asset/mockData/appointmentRequests'
 import { filterRequestsByPeriod } from '@/src/utils/filterRequestsByPeriod'
 import ExportCSV from '@/src/features/exportFiles/components/ExportCSV'
 import ExportPDF from '@/src/features/exportFiles/components/ExportPDF'
@@ -10,18 +10,23 @@ import ExportPDF from '@/src/features/exportFiles/components/ExportPDF'
 export default function Dashboard() {
   const router = useRouter()
   const [period, setPeriod] = useState<'all' | 'daily' | 'weekly'>('all')
-  const [filteredRequests, setFilteredRequests] = useState(appointmentRequests)
-
+  const [filteredRequests, setFilteredRequests] = useState(null)
+  
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('isLoggedIn')
     if (!isLoggedIn) {
       router.push('/admin/login')
     }
   }, [router])
-
+  
   useEffect(() => {
-    const filtered = filterRequestsByPeriod(appointmentRequests, period)
-    setFilteredRequests(filtered)
+    const fetchData = async () => {
+      const response = await fetch('http://localhost:8000/api/v1/resident/request', {method: "GET"})
+      const appointmentRequests = await response.json()
+      const filtered = filterRequestsByPeriod(appointmentRequests.data, period)
+      setFilteredRequests(filtered)
+    }
+    fetchData()
   }, [period])
 
   const handleLogout = () => {
@@ -59,18 +64,22 @@ export default function Dashboard() {
             <th>Email</th>
             <th>Phone</th>
             <th>Address</th>
-            <th>Requested At</th>
+            <th>Requested Date</th>
+            <th>Requested Timeslot</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
-          {filteredRequests.length > 0 ? (
-            filteredRequests.map((request) => (
+          {filteredRequests?.length > 0 ? (
+            filteredRequests?.map((request) => (
               <tr key={request.id}>
                 <td>{request.name}</td>
                 <td>{request.email}</td>
-                <td>{request.phone}</td>
+                <td>{request.phoneNumber}</td>
                 <td>{request.address}</td>
-                <td>{new Date(request.requestedAt).toLocaleString()}</td>
+                <td>{new Date(request.preferred_date).toLocaleString('en-US', {dateStyle: "full"})}</td>
+                <td>{request.preferred_timeslot}</td>
+                <td>{request.request_status}</td>
               </tr>
             ))
           ) : (
