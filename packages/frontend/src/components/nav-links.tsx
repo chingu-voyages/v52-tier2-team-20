@@ -4,8 +4,6 @@ import {
   Cog8ToothIcon,
 } from '@heroicons/react/24/outline';
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Overview', href: '/admin/dashboard', icon: HomeIcon },
   { name: 'Scheduling', href: '/admin/dashboard/scheduling', icon: CalendarIcon },
