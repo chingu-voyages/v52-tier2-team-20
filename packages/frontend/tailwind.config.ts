@@ -39,7 +39,9 @@ export default {
   			'yellow-cta': '#F6C114',
   			'black-text': '#1E1E1E',
   			'nav-bg': '#1E1E1E',
-  			'nav-bg-hover': '#8D8D8B'
+  			'nav-bg-hover': '#8D8D8B',
+			'active-blue': '#3E87F1',
+			'hover-gray': '#8D8D8B'
   		},
   		fontFamily: {
   			'bebas-neue': [
