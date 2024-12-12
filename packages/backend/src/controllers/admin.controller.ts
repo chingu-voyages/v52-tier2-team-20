@@ -22,13 +22,12 @@ export async function deleteRequestById(req:Request, res:Response){
           id: requestId,
         },
       })
-      
-      res.status(204).json({
-        status: 204,
+      return res.status(201).json({
+        status: 201,
         message: 'Request successfully deleted',
       });
     } catch {
-      res.status(500).json({
+      return res.status(500).json({
         status: 500,
         message: 'Server error',
       });

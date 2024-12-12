@@ -2,7 +2,11 @@ type Appointment = {
   id: number
   name: string
   email: string
-  phone: string
+  phoneNumber: string
   address: string
-  requestedAt: string
+  latitude: string
+  longitude: string
+  preferred_date: string
+  preferred_timeslot: string
+  request_status: string
 }[]
