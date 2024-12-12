@@ -1,7 +1,9 @@
 "use client"
 
+import UpdateRequestForm from '@/src/components/UpdateRequestForm'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
+
 
 function RequestPage() {
 
@@ -17,16 +19,16 @@ function RequestPage() {
         setRequest(requestData)
       }
       fetchRequestData()
-    }, [params])
+    }, [])
     
-
+if(request){
   return (
-    <>
-    <div>Request Page</div>
-    <h1>{request?.data.name}</h1>
-    <h2>{request?.data.address}</h2>
-    </>
+    <div className='ml-20 mt-10'>
+    <h1 className='text-3xl font-semibold'>Appointment details</h1>
+    <UpdateRequestForm request={request}/>
+    </div>
   )
+}
 }
 
 export default RequestPage
