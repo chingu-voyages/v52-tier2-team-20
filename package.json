@@ -15,5 +15,9 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "diff": "lerna diff"
+  },
+  "dependencies": {
+    "react-hook-form": "^7.54.0",
+    "zod": "^3.24.1"
   }
 }
