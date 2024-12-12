@@ -10,6 +10,7 @@
     "echo:": "echo test next app"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@react-pdf/renderer": "^4.1.5",
     "next": "15.0.3",
     "react": "18.3.1",

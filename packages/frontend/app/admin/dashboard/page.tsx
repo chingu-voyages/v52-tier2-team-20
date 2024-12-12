@@ -7,7 +7,7 @@ import { filterRequestsByPeriod } from '@/src/utils/filterRequestsByPeriod'
 import ExportCSV from '@/src/features/exportFiles/components/ExportCSV'
 import ExportPDF from '@/src/features/exportFiles/components/ExportPDF'
 
-export default function Dashboard() {
+export default function DashboardPage() {
   const router = useRouter()
   const [period, setPeriod] = useState<'all' | 'daily' | 'weekly'>('all')
   const [filteredRequests, setFilteredRequests] = useState(null)
@@ -35,7 +35,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
+    <>
       <h1>Admin Dashboard</h1>
       <button onClick={handleLogout}>Logout</button>
       <div>
@@ -56,39 +56,50 @@ export default function Dashboard() {
 
       <ExportCSV />
       <ExportPDF />
-
-      <table>
-        <thead>
+      
+      <div className="overflow-y-auto max-h-96 border rounded">
+      <table className="table-fixed max-w-96 divide-y divide-gray-200">
+        <thead className="bg-gray-100 sticky top-0">
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Address</th>
-            <th>Requested Date</th>
-            <th>Requested Timeslot</th>
-            <th>Status</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Name</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Email</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Phone</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Address</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Requested Date</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Requested Timeslot</th>
+            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th>
+            <th className="px-4 py-3"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white divide-y divide-gray-200">
           {filteredRequests?.length > 0 ? (
-            filteredRequests?.map((request) => (
+            filteredRequests.map((request) => (
               <tr key={request.id}>
-                <td>{request.name}</td>
-                <td>{request.email}</td>
-                <td>{request.phoneNumber}</td>
-                <td>{request.address}</td>
-                <td>{new Date(request.preferred_date).toLocaleString('en-US', {dateStyle: "full"})}</td>
-                <td>{request.preferred_timeslot}</td>
-                <td>{request.request_status}</td>
+                <td className="px-4 py-4 whitespace-nowrap">{request.name}</td>
+                <td className="px-4 py-4 whitespace-nowrap">{request.email}</td>
+                <td className="px-4 py-4 whitespace-nowrap">{request.phoneNumber}</td>
+                <td className="px-4 py-4 whitespace-nowrap">{request.address}</td>
+                <td className="px-4 py-4 whitespace-nowrap">
+                  {new Date(request.preferred_date).toLocaleString("en-US", { dateStyle: "full" })}
+                </td>
+                <td className="px-4 py-4 whitespace-nowrap">{request.preferred_timeslot}</td>
+                <td className="px-4 py-4 whitespace-nowrap">{request.request_status}</td>
+                <td className="px-4 py-4 whitespace-nowrap">
+                  <a href={`/admin/dashboard/${request.id}`}>
+                    <button className="text-blue-500 hover:underline">View</button>
+                  </a>
+                </td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan={5}>No requests found.</td>
+              <td colSpan={8} className="px-6 py-4 text-center text-gray-500">No requests found.</td>
             </tr>
           )}
         </tbody>
       </table>
-    </div>
+      </div>
+
+    </>
   )
 }
