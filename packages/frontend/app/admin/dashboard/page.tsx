@@ -47,9 +47,6 @@ export default function DashboardPage() {
     })
   }, [status])
 
-  console.log(typeof status);
-  
-
   return (
     <div className='pl-16 pr-16'>
       <h1 className='text-5xl font-semibold'>Overview</h1>
