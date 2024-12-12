@@ -21,7 +21,7 @@ function DashboardCounterButtons({requestCount, setStatus}) {
     {dashboardButtons.map((dashboardButton)=>{
       const ButtonIcon = dashboardButton.icon
       return(
-      <button key={dashboardButton.innerText} onClick={()=>{setStatus(dashboardButton.value)}} className='grid p-5 h-32 w-96 text-lg rounded-xl bg-white drop-shadow-lg hover:bg-active-blue hover:text-white'><ButtonIcon className='size-16'/>{`${dashboardButton.innerText} ${dashboardButton.requestCount}`}</button>
+      <button key={dashboardButton.innerText} onClick={()=>{setStatus(dashboardButton.value)}} className='grid grid-cols-2 grid-rows-2 p-5 h-32 w-96 text-2xl rounded-xl bg-white drop-shadow-lg hover:bg-active-blue hover:text-white focus:outline-none focus:ring focus:bg-blue-active'><ButtonIcon className='row-span-3 size-16 justify-self-center self-center'/><div className='flex flex-col justify-self-center'><h3 className='font-semibold'>{dashboardButton.innerText}</h3><h4>{dashboardButton.requestCount}</h4></div></button>
       )
     })
       
