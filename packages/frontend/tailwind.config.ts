@@ -4,7 +4,7 @@ export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,7 +14,9 @@ export default {
         "letter-grey": "#8D8D8B",
         "stroke-line": "#8B8484",
         "yellow-cta": "#F6C114",
-        "black-text": "1E1E1E"
+        "black-text": '1E1E1E',
+        'nav-bg': '#1E1E1E',
+        'nav-bg-hover': '#8D8D8B'
       },
       fontFamily: {
         "bebas-neue": ['Bebas Neue', 'sans-serif'],
