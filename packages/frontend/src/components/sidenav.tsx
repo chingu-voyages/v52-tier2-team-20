@@ -12,7 +12,7 @@ export default function SideNav() {
   }
   return (
     <div className="flex h-full bg-nav-bg flex-col px-3 py-4 md:px-2">
-      <a className="mb-2 flex h-72 items-end justify-start rounded-md bg-nav-bg p-4 md:h-40"
+      <a className="mb-2 flex h-48 items-end justify-start rounded-md bg-nav-bg p-4 md:h-40"
         href="/admin/dashboard">
         <div className="w-72 text-white md:w-40">
           <Logo />

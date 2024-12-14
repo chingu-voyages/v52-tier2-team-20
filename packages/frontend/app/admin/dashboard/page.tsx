@@ -48,8 +48,8 @@ export default function DashboardPage() {
   }, [status])
 
   return (
-    <div className='pl-16 pr-16'>
-      <h1 className='text-5xl font-semibold'>Overview</h1>
+    <div className='pl-4 md:pl-16 pr-4 md:pr-16'>
+      <h1 className='text-4xl md:text-5xl font-semibold'>Overview</h1>
 
       <DashboardCounterButtons requestCount={[unscheduledRequestsCount, scheduledRequestsCount, completedRequestsCount]} setStatus={setStatus}/>
       
@@ -60,15 +60,15 @@ export default function DashboardPage() {
       
       <h2 className='text-2xl font-semibold'>{status}</h2>
       <div className="overflow-y-auto max-h-96 border rounded">
-      <table className="table-fixed max-w-96 divide-y divide-gray-200">
+      <table className="table-fixed md:max-w-96 divide-y divide-gray-200">
         <thead className="bg-gray-100 sticky top-0">
           <tr>
             <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Name</th>
-            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Email</th>
-            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Phone</th>
-            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Address</th>
-            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Requested Date</th>
-            <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Requested Timeslot</th>
+            <th className="hidden md:table-cell px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Email</th>
+            <th className="hidden md:table-cell px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Phone</th>
+            <th className="hidden md:table-cell px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Address</th>
+            <th className="hidden md:table-cell px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Requested Date</th>
+            <th className="hidden md:table-cell px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Requested Timeslot</th>
             {/* <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th> */}
             <th className="px-4 py-3"></th>
           </tr>
@@ -78,13 +78,13 @@ export default function DashboardPage() {
             arr.map((request) => (
               <tr key={request.id}>
                 <td className="px-4 py-4 whitespace-nowrap">{request.name}</td>
-                <td className="px-4 py-4 whitespace-nowrap">{request.email}</td>
-                <td className="px-4 py-4 whitespace-nowrap">{request.phoneNumber}</td>
-                <td className="px-4 py-4 whitespace-nowrap">{request.address}</td>
-                <td className="px-4 py-4 whitespace-nowrap">
+                <td className="hidden md:table-cell px-4 py-4 whitespace-nowrap">{request.email}</td>
+                <td className="hidden md:table-cell px-4 py-4 whitespace-nowrap">{request.phoneNumber}</td>
+                <td className="hidden md:table-cell px-4 py-4 whitespace-nowrap">{request.address}</td>
+                <td className="hidden md:table-cell px-4 py-4 whitespace-nowrap">
                   {new Date(request.preferred_date).toLocaleString("en-US", { dateStyle: "full" })}
                 </td>
-                <td className="px-4 py-4 whitespace-nowrap">{request.preferred_timeslot}</td>
+                <td className="hidden md:table-cell px-4 py-4 whitespace-nowrap">{request.preferred_timeslot}</td>
                 {/* <td className="px-4 py-4 whitespace-nowrap">{request.request_status}</td> */}
                 <td className="px-4 py-4 whitespace-nowrap">
                   <a href={`/admin/dashboard/${request.id}`}>
