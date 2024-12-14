@@ -88,8 +88,8 @@ export default function UpdateRequestForm({request}) {
         }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex mt-14">
-        <div className='flex flex-col w-1/2 justify-start space-y-9'>
+    <form onSubmit={handleSubmit(onSubmit)} className="md:flex md:flex-wrap mt-14">
+        <div className='flex flex-col md:w-1/2 justify-start space-y-9'>
         <FormField 
             label="Name"
             type="text"
@@ -130,9 +130,8 @@ export default function UpdateRequestForm({request}) {
             register={register}
             error={errors.id}
         />
-        <button type="submit" className='hover:bg-blue-400 bg-active-blue text-white text-sm rounded-xl h-12 max-w-72'disabled={buttonDisabled}>Save changes</button>
         </div>
-        <div className='flex flex-col w-1/2 justify-start space-y-9'>
+        <div className='flex flex-col md:w-1/2 justify-start space-y-9 pt-9 md:pt-0'>
         <FormField
             label="Preferred date"
             type="text"
@@ -165,6 +164,11 @@ export default function UpdateRequestForm({request}) {
             <option value="completed">Completed</option>
         </select>
         </label>
+        </div>
+        <div className='pt-9 space-y-4 md:w-full md:inline-flex'>
+        <div className='md:w-1/2'>
+        <button type="submit" className='hover:bg-blue-400 bg-active-blue text-white text-sm rounded-xl h-12 w-72'disabled={buttonDisabled}>Save changes</button>
+        </div>
         {/* Replace button with shadcn dialog box one day... */}
         <button className='flex flex-row text-red-500 underline max-w-52 active:bg-red-300' onClick={handleClick}><TrashIcon className='size-5 mr-1'/>Delete appointment</button> 
         </div>

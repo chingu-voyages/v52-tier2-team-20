@@ -1,51 +1,45 @@
-# voyage-tasks
+# Solar Panel App
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Overview
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+The Solar Panel App was developed as part of **Chingu Voyage 52**.  This App enables users to book appointments seamlessly.  The app communicates with an API to handle the booking data and confirms success upon completing the booking process.
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+[Live LINK]:(https://tinyurl.com/yk3wubft).
 
-> Own it & Make it your Own!
+## Tech Stack
 
-## Team Documents
+- **FrontEnd:** Next.JS, Tailwindcss 
+- **Backend:** Node.JS, Prisma, MongoDB
+- **Monorepo Management:** Lerna
 
-You may find these helpful as you work together to organize your project.
+## Meet Our Team
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+- **Kristen Boraca** - UI / UX Designer 
+[GitHub](https://github.com/khb2me/chingu_group20.git) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- **Gary Lei** - Frontend Developer
+[GitHub](https://github.com/xsymmetry9/) / [LinkedIn](https://www.linkedin.com/in/gary-lei-b8b4a540)
+- **Stephen Ho - Backend Developer**
+[Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
+- **Azalya Rahmatika - Frontend Designer**
+[Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
+- Ryu - Frontend Designer
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+## Monorepo Architecture
+This app uses a **monorepo structure** managed by [**Lerna**](https://lerna.js.org/docs/introduction)
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+### Getting started
+To set up and run the project locally, follow these steps: 
 
-## Our Team
+```bash
+# Install the depenencies for the project
+npm install 
 
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
+# Navigate to the backend package
+cd packages/backend
 
-- Kristen Boraca [GitHub](https://github.com/khb2me/chingu_group20.git) / [LinkedIn](https://linkedin.com/in/liaccountname)
-- Gary Lei [GitHub](https://github.com/xsymmetry9/) / [LinkedIn](https://www.linkedin.com/in/gary-lei-b8b4a540)
-- Stephen Ho [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
-- Azalya Rahmatika [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
+# Generate prisma Client for database access 
+npx prisma generate 
 
-## Monorepo app with lerna
-You can find the documentation [Lerna](https://lerna.js.org/docs/introduction)
-
-### Installation
-
-``` 
-npm install
-npm run build
-npm run dev
+# Start the development server
+npm run dev 
 ```

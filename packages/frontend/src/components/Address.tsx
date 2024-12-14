@@ -29,7 +29,7 @@ export default function Address({ onSubmit }: AddressProps) {
               value={formData.address.street_address}
               onChange={handleChange}
               placeholder="Example: Mulholland"
-              className={`font-montserrat mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+              className={`font-montserrat mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
                 errors.street_address ? "border-red-500" : "border-stroke-line"
               }`}
             />
@@ -48,7 +48,7 @@ export default function Address({ onSubmit }: AddressProps) {
               name="house_number"
               value={formData.address.house_number}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+              className={`mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
                 errors.house_number ? "border-red-500" : "border-stroke-line"
               }`}
             />
@@ -67,7 +67,7 @@ export default function Address({ onSubmit }: AddressProps) {
               name="zip_code"
               value={formData.address.zip_code}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-1/3 h-[24px] border rounded text-sm ${
+              className={`mt-1 px-2 py-1 w-1/3 h-[28px] border rounded text-sm max-[482px]:bg-black ${
                 errors.zip_code ? "border-red-500" : "border-stroke-line"
               }`}
             />

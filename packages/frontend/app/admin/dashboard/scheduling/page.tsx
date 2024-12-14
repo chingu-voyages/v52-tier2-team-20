@@ -9,7 +9,7 @@ function SchedulingPage() {
 
   return (
     <>
-    <div>SchedulingPage</div>
+    <div>Scheduling Page (coming soon!)</div>
     {/* <SchedulingMap apiKey={apiKey}/> */}
     </>
   )
