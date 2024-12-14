@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import Image from 'next/image'
 
 type UserCredentials = {
   email: string
@@ -31,7 +32,6 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const router = useRouter()
-
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -49,7 +49,18 @@ const Login = () => {
     <>
       <form className="flex flex-col justify-center gap-3 h-full" onSubmit={handleLogin}>
             <div className='container flex justify-center'>
-                <img className="w-[121.91px] h-[74px]" src="/images/logo.png" alt="logo" />
+              <picture>
+                  <source 
+                    srcSet="/images/logo-dark.png"
+                    media="(max-width: 640px)"
+                  />
+                  <Image
+                  src="/images/logo.png"
+                  width= {121}
+                  height= {74}
+                  alt= {"logo"}/>
+              </picture>
+      
             </div>
             <div className="container w-[228px] mx-auto mt-[30px]">
                 <label htmlFor="password" className="text-base text-letter-grey font-inter">Email Address</label>
