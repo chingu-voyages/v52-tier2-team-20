@@ -60,7 +60,7 @@ const Login = () => {
                     onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
-            <div className='container w-[228px] mx-auto'>
+            <div className='mt-[1rem] relative'>
                 <label htmlFor="password" className="text-base text-letter-grey font-inter">Password</label>
                 <input
                     className="mt px-2 py-1 w-[228px] h-[24px] border rounded text-sm"
@@ -69,9 +69,7 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
-            <div className="w-[228px] mx-auto mt-[12px]">
-              <button className="bg-font-montserrat text-black-text font-semibold border border-yellow-cta rounded-[5px] w-[240px] h-[33px] bg-yellow-cta" type="submit">Login</button>
-            </div>
+            <button className="bg-font-montserrat text-black-text font-semibold border border-yellow-cta rounded-[5px] mt-[3rem] px-[97px] py-[7px] my-5 bg-yellow-cta" type="submit">Login</button>
       
 
       </form>
