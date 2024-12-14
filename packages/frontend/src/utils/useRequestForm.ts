@@ -61,13 +61,35 @@ export function useRequestForm(): {
     setFormTag("dates");
   };
 
-  const handleDatesSubmit = (datesData: { preferred_date: string; preferred_timeslot: string }) => {
+  const handleDatesSubmit = async (datesData: { preferred_date: string; preferred_timeslot: string }) => {
     setFormData((prevData) => ({
       ...prevData,
       preferred_date: datesData.preferred_date,
       preferred_timeslot: datesData.preferred_timeslot,
     }));
     setFormTag("confirm");
+
+    try {
+      const response = await fetch("http://localhost:3000/api/v1/api/v1/resident/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit data");
+      }
+
+      const result = await response.json();
+      console.log("API Response:", result);
+      setFormTag("confirm");
+    } catch (error) {
+      console.error("Error submitting data:", error);
+    }
   };
 
   useEffect(() => {
