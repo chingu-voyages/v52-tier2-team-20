@@ -13,7 +13,7 @@ export default function FormTabs({ formTag, handlerTag }: FormTabsProps) {
       {formTags.map((id, index, arr) => (
         <div key={id} className="flex flex-col justify-between items-center gap-2 relative">
           <div
-            className={`rounded-full text-white flex items-center justify-center w-[28.49px] h-[26.97px] relative ${arr.indexOf(formTag) >= index ? "bg-black" : "bg-letter-grey"}`}
+            className={`rounded-full text-white flex items-center justify-center w-[28.49px] h-[26.97px] relative ${arr.indexOf(formTag) >= index ? "bg-black max-[482px]:bg-yellow-cta" : "bg-letter-grey"}`}
           >
             {arr.indexOf(formTag) > index ? (
               <svg
@@ -36,14 +36,14 @@ export default function FormTabs({ formTag, handlerTag }: FormTabsProps) {
 
             {index !== arr.length - 1 && (
               <div
-                className={`absolute top-1/2 left-full h-[1px] ${arr.indexOf(formTag) > index ? "bg-black" : "bg-letter-grey"}`}
+                className={`absolute top-1/2 left-full h-[1px] ${arr.indexOf(formTag) > index ? "bg-black max-sm:bg-letter-grey" : "bg-letter-grey"} `}
                 style={{ width: "calc(100% + 3rem)" }}
               ></div>
             )}
           </div>
 
           <a
-            className={`cursor-pointer transition-opacity ${arr.indexOf(formTag) >= index ? "text-black" : "text-letter-grey"}`}
+            className={`cursor-pointer transition-opacity ${arr.indexOf(formTag) >= index ? "text-black max-[482px]:text-yellow-cta" : "text-letter-grey"}`}
             id={id}
             onClick={handlerTag}
           >
