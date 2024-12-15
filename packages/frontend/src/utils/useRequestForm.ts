@@ -32,7 +32,7 @@ export function useRequestForm(): {
     longitude: "",
     preferred_date: "",
     preferred_timeslot: "",
-    request_status: "pending",
+    request_status: "unscheduled",
   });
 
   const handlerTag = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -77,6 +77,8 @@ export function useRequestForm(): {
         },
         body: JSON.stringify({
           ...formData,
+          preferred_date: datesData.preferred_date,
+          preferred_timeslot: datesData.preferred_timeslot,
         }),
       });
 

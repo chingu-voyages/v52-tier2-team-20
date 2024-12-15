@@ -38,7 +38,7 @@ export default function Dates({ onSubmit }: DatesProps) {
           
 
           <div className="flex gap-2 items-center relative">
-            {["AM", "PM"].map((time) => (
+            {["am", "pm"].map((time) => (
               <label key={time} className="flex justify-center items-center gap-1">
                 <input
                   type="checkbox"
