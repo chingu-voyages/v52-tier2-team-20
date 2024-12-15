@@ -44,7 +44,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+              className={`[&::-webkit-inner-spin-button]:appearance-none mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
                 errors.phone ? "border-red-500" : "border-stroke-line"
               }`}
             />
