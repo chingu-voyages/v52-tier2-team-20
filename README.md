@@ -9,7 +9,7 @@ The Solar Panel App was developed as part of **Chingu Voyage 52**.  This App ena
 ## Tech Stack
 
 - **FrontEnd:** Next.JS, Tailwindcss 
-- **Backend:** Node.JS, Prisma, MongoDB
+- **Backend:** Node.JS, Express.js, Prisma, MongoDB
 - **Monorepo Management:** Lerna
 
 ## Meet Our Team
@@ -38,7 +38,10 @@ npm install
 cd packages/backend
 
 # Generate prisma Client for database access 
-npx prisma generate 
+npx prisma generate
+
+# Navigate to the root folder
+cd ../..
 
 # Start the development server
 npm run dev 
