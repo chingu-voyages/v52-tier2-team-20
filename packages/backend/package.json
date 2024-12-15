@@ -5,7 +5,7 @@
   "main": "src/listen.ts",
   "scripts": {
     "test": "npm run test",
-    "server": "node src/listen.ts",
+    "server": "ts-node src/listen.ts",
     "dev": "nodemon --watch ./src  --ext ts --exec 'ts-node src/listen.ts'"
   },
   "repository": {
