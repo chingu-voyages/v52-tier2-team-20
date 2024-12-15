@@ -25,7 +25,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+              className={`font-montserrat mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
                 errors.name ? "border-red-500" : "border-stroke-line"
               }`}
             />
@@ -44,7 +44,11 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`[&::-webkit-inner-spin-button]:appearance-none mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+<<<<<<< feature/styling
+              className={`font-montserrat mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
+=======
+              className={`[&::-webkit-inner-spin-button]:appearance-none mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
+>>>>>>> main
                 errors.phone ? "border-red-500" : "border-stroke-line"
               }`}
             />
@@ -63,7 +67,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`mt-1 px-2 py-1 w-full h-[24px] border rounded text-sm ${
+              className={`font-montserrat mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
                 errors.email ? "border-red-500" : "border-stroke-line"
               }`}
             />

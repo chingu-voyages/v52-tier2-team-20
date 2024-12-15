@@ -14,7 +14,7 @@ export default function Dates({ onSubmit }: DatesProps) {
   console.log(errors);
   return (
     <div className="font-montserrat w-full space-y-6">
-      <h2 className="font-semibold text-[13px]">
+      <h2 className="font-semibold text-[13px] max-sm:text-letter-grey">
         Please choose your preferred consultation dates
       </h2>
 
@@ -26,7 +26,7 @@ export default function Dates({ onSubmit }: DatesProps) {
               name="date"
               value={formData.dates.preferred_date}
               onChange={handleDateChange}
-              className={`w-[198px] h-[33px] px-2 py-1 border rounded text-sm bg-transparent ${
+              className={`w-[198px] h-[33px] px-2 py-1 border rounded text-sm bg-transparent max-sm:text-letter-grey ${
                 errors.dates.preferred_date ? "border-red-500" : "border-stroke-line"
               }`}
             />
@@ -50,7 +50,7 @@ export default function Dates({ onSubmit }: DatesProps) {
                     errors.dates.preferred_timeslot ? "border-red-500" : "border-stroke-line"
                   }`}
                 />
-                <span className="text-sm">{time}</span>
+                <span className="text-sm max-sm:text-letter-grey">{time}</span>
               </label>
             ))}
             {errors.dates.preferred_timeslot && (
@@ -60,11 +60,11 @@ export default function Dates({ onSubmit }: DatesProps) {
         </div>
 
         <div className="pb-16">
-          <div className="flex gap-2 mb-1">
+          <div className="flex gap-2 mb-1 ">
             <Image src="/images/Plus-Icon.svg" alt="Plus Icon" width={18} height={18} />
             <p className="font-semibold text-[12px] text-letter-grey">Added date:</p>
           </div>
-          <p className="pb-1 font-montserrat text-base">
+          <p className="pb-1 font-montserrat text-base max-sm:text-letter-grey">
             {formData.dates.preferred_date
               ? new Date(formData.dates.preferred_date).toLocaleDateString("en-US", {
                   weekday: "short",
