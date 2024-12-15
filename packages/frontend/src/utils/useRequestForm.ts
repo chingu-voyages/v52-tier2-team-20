@@ -70,7 +70,7 @@ export function useRequestForm(): {
     setFormTag("confirm");
 
     try {
-      const response = await fetch("http://localhost:3000/api/v1/api/v1/resident/request", {
+      const response = await fetch("http://localhost:8000/api/v1/resident/request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
