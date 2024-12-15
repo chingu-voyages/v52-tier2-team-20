@@ -10,7 +10,6 @@
     "echo:": "echo test next app"
   },
   "dependencies": {
-    "@here/maps-api-for-javascript": "^1.61.1",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",
     "@react-pdf/renderer": "^4.1.5",
