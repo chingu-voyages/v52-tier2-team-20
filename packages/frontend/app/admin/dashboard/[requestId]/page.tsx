@@ -14,7 +14,7 @@ function RequestPage() {
 
     useEffect(() => {
       const fetchRequestData = async () =>{
-        const response = await fetch(`http://localhost:8000/api/v1/resident/request/${requestId}`, {method: "GET"})
+        const response = await fetch(`https://v52-tier2-team-20.onrender.com/api/v1/resident/request/${requestId}`, {method: "GET"})
         const requestData = await response.json()
         setRequest(requestData)
       }

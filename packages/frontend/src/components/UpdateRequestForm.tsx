@@ -65,7 +65,7 @@ export default function UpdateRequestForm({request}:{request:any}) {
                 // preferred_timeslot: preferred_timeslot,
                 request_status: request_status
              })
-            const response = await fetch(`http://localhost:8000/api/v1/admin/request/${id}`, {method: 'PATCH', headers: {'Content-Type':'application/json'}, body: postBody})
+            const response = await fetch(`https://v52-tier2-team-20.onrender.com/api/v1/admin/request/${id}`, {method: 'PATCH', headers: {'Content-Type':'application/json'}, body: postBody})
             if (response.status === 200 || response.status === 400){
                 setButtonDisabled(false)
             }
@@ -73,7 +73,7 @@ export default function UpdateRequestForm({request}:{request:any}) {
 
         async function handleClick() {
             const deleteRequestById = async (id:string) => {
-                const response = await fetch(`http://localhost:8000/api/v1/admin/request/${id}`, {method: "DELETE"})
+                const response = await fetch(`https://v52-tier2-team-20.onrender.com/api/v1/admin/request/${id}`, {method: "DELETE"})
             const apiResponse = await response.json()
             return apiResponse
             }

@@ -40,7 +40,7 @@ export default function DashboardPage() {
   
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:8000/api/v1/resident/request', {method: "GET"})
+      const response = await fetch('https://v52-tier2-team-20.onrender.com/api/v1/resident/request', {method: "GET"})
       return response.json()
     }
     fetchData().then((appointmentRequests)=>{
