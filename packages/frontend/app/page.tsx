@@ -24,6 +24,7 @@ export default function Home() {
         <div className="flex flex-col items-center bg-no-repeat bg-cover bg-center w-screen h-screen" style={{ backgroundImage: `url('images/landing-page.png')`, backgroundRepeat: 'no-repeat', backgroundSize: "cover", width: "100vw", height: "100vh" }}
         >
         <HomePage />
+        <a href="/admin/login"><button className="font-montserrat bg-active-blue p-3 rounded-sm mb-4">Staff login</button></a>
         </div>
       </main>
 
