@@ -77,6 +77,8 @@ export function useRequestForm(): {
         },
         body: JSON.stringify({
           ...formData,
+          preferred_date: datesData.preferred_date,
+          preferred_timeslot: datesData.preferred_timeslot,
         }),
       });
 
