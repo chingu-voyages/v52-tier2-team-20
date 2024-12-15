@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 export function useDatesForm(
-  onSubmit: (datesData: { preferred_date: string;
-    preferred_timeslot: string }) => void
+  onSubmit: (datesData: { preferred_date: string; preferred_timeslot: string }) => void
 ) {
   const [formData, setFormData] = useState({
     dates: {
@@ -21,12 +20,12 @@ export function useDatesForm(
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newDate = event.target.value;
     setFormData((prev) => {
-      const updatedData = { 
-        ...prev, 
-        dates: { 
+      const updatedData = {
+        ...prev,
+        dates: {
           ...prev.dates,
-          preferred_date: newDate
-        }
+          preferred_date: newDate,
+        },
       };
       return updatedData;
     });
@@ -35,11 +34,11 @@ export function useDatesForm(
   const handleTimeChange = (time: string) => {
     setFormData((prev) => {
       const timeslot = prev.dates.preferred_timeslot;
-  
+
       const updatedTimeslot = timeslot.includes(time)
         ? timeslot.filter((t) => t !== time)
-        : [...timeslot, time]; 
-  
+        : [...timeslot, time];
+
       return {
         ...prev,
         dates: {
@@ -52,16 +51,16 @@ export function useDatesForm(
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-  
+
     const { preferred_date, preferred_timeslot } = formData.dates;
-  
+
     const newErrors = {
       dates: {
         preferred_date: !preferred_date,
         preferred_timeslot: preferred_timeslot.length === 0,
       },
     };
-  
+
     setErrors(newErrors);
 
     if (newErrors.dates.preferred_date || newErrors.dates.preferred_timeslot) {
@@ -69,21 +68,22 @@ export function useDatesForm(
       return;
     }
 
-    if (new Date(preferred_date).setHours(0, 0, 0, 0) < new Date().setHours(0, 0, 0, 0)) {
+    const selectedDate = new Date(preferred_date);
+
+    if (selectedDate.setHours(0, 0, 0, 0) < new Date().setHours(0, 0, 0, 0)) {
       alert("Selected date cannot be in the past. Please choose a valid date.");
       return;
     }
-  
+
+    const isoDate = selectedDate.toISOString();
+
     const datesData = {
-      preferred_date,
+      preferred_date: isoDate,
       preferred_timeslot: preferred_timeslot.join(", "),
     };
-  
+
     onSubmit(datesData);
   };
-  
-  
-  
 
   return {
     formData,
