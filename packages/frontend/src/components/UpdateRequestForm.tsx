@@ -10,7 +10,7 @@ import {
   } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation'
 
-export default function UpdateRequestForm({request}) {
+export default function UpdateRequestForm({request}:{request:any}) {
     //STATE
 
     const [buttonDisabled, setButtonDisabled] = useState(false)

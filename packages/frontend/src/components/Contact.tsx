@@ -44,11 +44,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-<<<<<<< feature/styling
-              className={`font-montserrat mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
-=======
-              className={`[&::-webkit-inner-spin-button]:appearance-none mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
->>>>>>> main
+              className={`[&::-webkit-inner-spin-button]:appearance-none font-montserrat mt-1 px-2 py-1 w-full h-[28px] border rounded text-sm max-[482px]:bg-black ${
                 errors.phone ? "border-red-500" : "border-stroke-line"
               }`}
             />

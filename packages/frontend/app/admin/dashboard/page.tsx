@@ -10,13 +10,26 @@ import ExportPDF from '@/src/features/exportFiles/components/ExportPDF'
 import { filterRequestsByStatus } from '@/src/utils/filterRequestsByStatus'
 import DashboardCounterButtons from '@/src/components/DashboardCounterButtons'
 
+type Request = {
+  id: number;
+  name: string;
+  email: string;
+  phoneNumber: string;
+  address: string;
+  latitude: string;
+  longitude: string;
+  preferred_date: string;
+  preferred_timeslot: string;
+  request_status: string;
+}
+
 export default function DashboardPage() {
   const router = useRouter()
   const [status, setStatus] = useState<'Unscheduled Requests' | 'Scheduled Requests' | 'Completed Requests'>('Unscheduled Requests')
   const [unscheduledRequestsCount, setUnscheduledRequestsCount] = useState(0)
   const [scheduledRequestsCount, setScheduledRequestsCount] = useState(0)
   const [completedRequestsCount, setCompletedRequestsCount] = useState(0)
-  const [arr, setArr] = useState(null)
+  const [arr, setArr] = useState<any| null>(null)
   
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('isLoggedIn')
@@ -75,7 +88,7 @@ export default function DashboardPage() {
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {arr?.length > 0 ? (
-            arr.map((request) => (
+            arr.map((request:Request) => (
               <tr key={request.id}>
                 <td className="px-4 py-4 whitespace-nowrap">{request.name}</td>
                 <td className="hidden md:table-cell px-4 py-4 whitespace-nowrap">{request.email}</td>

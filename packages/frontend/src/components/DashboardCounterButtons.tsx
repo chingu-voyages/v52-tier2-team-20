@@ -6,7 +6,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 
-function DashboardCounterButtons({requestCount, setStatus}) {
+function DashboardCounterButtons({requestCount, setStatus} : {requestCount:any, setStatus:any}) {
 
   const [unscheduledRequestsCount, scheduledRequestsCount, completedRequestsCount] = requestCount
   
