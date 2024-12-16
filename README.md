@@ -18,7 +18,7 @@ The Solar Panel App was developed as part of **Chingu Voyage 52**.  This App ena
 [GitHub](https://github.com/khb2me/chingu_group20.git) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - **Gary Lei** - Frontend Developer
 [GitHub](https://github.com/xsymmetry9/) / [LinkedIn](https://www.linkedin.com/in/gary-lei-b8b4a540)
-- **Stephen Ho - Backend Developer**
+- **Stephen Ho - Frontend/Backend Developer**
 [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
 - **Azalya Rahmatika - Frontend Designer**
 [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
