@@ -14,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        {children}
+        <div className="max-w-[1100px] w-full border-1">
+          {children}
+        </div>
       </body>
     </html>
   );
