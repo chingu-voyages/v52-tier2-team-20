@@ -9,7 +9,7 @@ export default function FormTabs({ formTag, handlerTag }: FormTabsProps) {
   const formTags = ["address", "contact", "dates", "confirm"];
 
   return (
-    <ul className="grid grid-cols-4 gap-x-8 text-[13px] font-montserrat h-[57px] pb-3 w-full relative">
+    <ul className="grid grid-cols-4 gap-x-8 text-[13px] font-montserrat h-[57px] pb-3 w-full relative mb-6">
       {formTags.map((id, index, arr) => (
         <div key={id} className="flex flex-col justify-between items-center gap-2 relative">
           <div
