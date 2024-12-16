@@ -20,6 +20,12 @@ export default function Home() {
         <HomePage />
         </div>
       </main>
+      <footer className="w-full bg-black">
+        <div className="pt-3 flex flex-col justify-center items-center gap-3">
+          <p className="text-white">Chingu-v52-team-20</p>
+          <p className="text-white">Copyright &copy; 2024</p>
+        </div>
+      </footer>
     </>
 
   );
