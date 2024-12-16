@@ -9,6 +9,7 @@ import ExportPDF from '@/src/features/exportFiles/components/ExportPDF'
 
 import { filterRequestsByStatus } from '@/src/utils/filterRequestsByStatus'
 import DashboardCounterButtons from '@/src/components/DashboardCounterButtons'
+import Loading from '@/src/components/Loading'
 
 type Request = {
   id: number;
@@ -25,6 +26,7 @@ type Request = {
 
 export default function DashboardPage() {
   const router = useRouter()
+  const [isLoading, setIsLoading] = useState<boolean>(true)
   const [status, setStatus] = useState<'Unscheduled Requests' | 'Scheduled Requests' | 'Completed Requests'>('Unscheduled Requests')
   const [unscheduledRequestsCount, setUnscheduledRequestsCount] = useState(0)
   const [scheduledRequestsCount, setScheduledRequestsCount] = useState(0)
@@ -57,6 +59,7 @@ export default function DashboardPage() {
       if(status==="Completed Requests"){
         setArr(completedRequestsArr)
       }
+      setIsLoading(false)
     })
   }, [status])
 
@@ -70,7 +73,8 @@ export default function DashboardPage() {
       <ExportCSV />
       <ExportPDF />
       </div>
-      
+      {isLoading? <Loading /> :
+      <>
       <h2 className='text-2xl font-semibold'>{status}</h2>
       <div className="overflow-y-auto max-h-96 border rounded">
       <table className="table-fixed md:max-w-96 divide-y divide-gray-200">
@@ -114,7 +118,8 @@ export default function DashboardPage() {
         </tbody>
       </table>
       </div>
-
+      </>
+      }
     </div>
   )
 }
