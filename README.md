@@ -4,7 +4,7 @@
 
 The Solar Panel App was developed as part of **Chingu Voyage 52**.  This App enables users to book appointments seamlessly.  The app communicates with an API to handle the booking data and confirms success upon completing the booking process.
 
-[Live LINK]:(https://tinyurl.com/yk3wubft).
+[Live LINK]:(https://v52-tier2-team-20.vercel.app/).
 
 ## Tech Stack
 
