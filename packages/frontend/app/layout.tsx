@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        <div className="grid w-full h-full bg-black overflow-hidden">
+        <div className="grid w-full h-full overflow-hidden">
           {children}
         </div>
       </body>
