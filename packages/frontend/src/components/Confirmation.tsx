@@ -3,7 +3,7 @@ export default function Confirmation() {
     <div className="pt-3 text-center text-sm font-montserrat text-[13px]">
       <div className="mb-10 space-y-3 max-sm:text-letter-grey">
         <p className="font-semibold">Thank you for your request.</p>
-        <p>Your confirmation number is <span className="font-semibold">2374645</span></p>
+        <p>Our team will contact you soon.</p>
         <p className="">A city hall representative will be in touch by phone to confirm your appointment time. We will do our best to accommodate your requested time slot, but cannot guarantee an exact match. </p>
       </div>
       
