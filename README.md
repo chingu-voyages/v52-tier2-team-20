@@ -4,7 +4,7 @@
 
 The Solar Panel App was developed as part of **Chingu Voyage 52**.  This App enables users to book appointments seamlessly.  The app communicates with an API to handle the booking data and confirms success upon completing the booking process.
 
-[Live LINK]:(https://v52-tier2-team-20.vercel.app/).
+[Live LINK:](https://v52-tier2-team-20.vercel.app/)
 
 ## Tech Stack
 
@@ -22,7 +22,7 @@ The Solar Panel App was developed as part of **Chingu Voyage 52**.  This App ena
 [Github](https://github.com/swlho) / [LinkedIn](https://www.linkedin.com/in/swlho)
 - **Azalya Rahmatika - Frontend Designer**
 [Github](https://github.com/azalyarahmatika) / [LinkedIn](https://www.linkedin.com/in/azalyarahmatika/)
-- Ryu - Frontend Developer
+- **Ryu - Frontend Developer**
 
 ## Monorepo Architecture
 This app uses a **monorepo structure** managed by [**Lerna**](https://lerna.js.org/docs/introduction)
